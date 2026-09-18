@@ -1,0 +1,15 @@
+torch
+torchvision
+albumentations
+lightgbm
+pandas
+numpy
+scikit-learn
+bitsandbytes
+fastapi
+uvicorn
+pydantic
+python-multipart
+Pillow
+wandb
+stringzilla==5.1.1  # 5.1.2 has no cp311-win_amd64 wheel, forces source build needing MSVC

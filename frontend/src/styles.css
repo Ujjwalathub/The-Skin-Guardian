@@ -1,0 +1,284 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark, .dark *));
+
+@theme inline {
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+
+  --font-sans: "Inter", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+
+  --color-butter: var(--butter);
+  --color-butter-sub: var(--butter-sub);
+  --color-butter-dim: var(--butter-dim);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-flag-red: var(--flag-red);
+  --color-flag-yellow: var(--flag-yellow);
+  --color-flag-green: var(--flag-green);
+}
+
+:root {
+  --radius: 20px;
+
+  /* White background theme */
+  --background: oklch(0.99 0 0);
+  --foreground: oklch(0.2 0.02 165);
+
+  --surface: oklch(0.97 0.01 165);
+  --surface-2: oklch(0.95 0.01 165);
+
+  --butter: oklch(0.3 0.04 165);
+  --butter-sub: oklch(0.4 0.05 165);
+  --butter-dim: oklch(0.55 0.04 165);
+
+  --primary: oklch(0.55 0.14 160);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.95 0.01 165);
+  --secondary-foreground: oklch(0.2 0.02 165);
+  --muted: oklch(0.95 0.01 165);
+  --muted-foreground: oklch(0.55 0.04 165);
+  --accent: oklch(0.55 0.14 160);
+  --accent-foreground: oklch(0.99 0 0);
+  --card: oklch(0.97 0.01 165);
+  --card-foreground: oklch(0.2 0.02 165);
+  --popover: oklch(0.97 0.01 165);
+  --popover-foreground: oklch(0.2 0.02 165);
+  --border: oklch(0.85 0.02 165 / 40%);
+  --input: oklch(0.85 0.02 165 / 30%);
+  --ring: oklch(0.55 0.14 160 / 45%);
+  --destructive: oklch(0.65 0.22 25);
+  --destructive-foreground: oklch(0.98 0.01 90);
+
+  --flag-red: oklch(0.68 0.22 25);
+  --flag-yellow: oklch(0.82 0.17 80);
+  --flag-green: oklch(0.68 0.16 160);
+
+  /* White theme colors */
+  --bg-white: #FFFFFF;
+  --bg-gray-light: #F8F9FA;
+  --bg-gray-surface: #F0F2F5;
+  --text-primary: #1A2B3C;
+  --text-secondary: #4A5568;
+  --text-tertiary: #718096;
+
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-bg-hover: rgba(255, 255, 255, 0.95);
+  --glass-border-color: rgba(74, 85, 104, 0.15);
+  --glass-border-strong: rgba(52, 211, 153, 0.4);
+  --glass-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.08);
+  --glass-shadow-hover: 0 8px 24px 0 rgba(0, 0, 0, 0.12);
+}
+
+.dark {
+  --background: oklch(0.13 0.02 165);
+  --foreground: oklch(0.96 0.01 165);
+
+  --surface: oklch(0.17 0.02 165);
+  --surface-2: oklch(0.21 0.02 165);
+
+  --butter: oklch(0.92 0.02 165);
+  --butter-sub: oklch(0.78 0.03 165);
+  --butter-dim: oklch(0.62 0.03 165);
+
+  --primary: oklch(0.65 0.16 160);
+  --primary-foreground: oklch(0.12 0.02 165);
+  --secondary: oklch(0.22 0.02 165);
+  --secondary-foreground: oklch(0.96 0.01 165);
+  --muted: oklch(0.22 0.02 165);
+  --muted-foreground: oklch(0.65 0.03 165);
+  --accent: oklch(0.65 0.16 160);
+  --accent-foreground: oklch(0.12 0.02 165);
+  --card: oklch(0.17 0.02 165);
+  --card-foreground: oklch(0.96 0.01 165);
+  --popover: oklch(0.17 0.02 165);
+  --popover-foreground: oklch(0.96 0.01 165);
+  --border: oklch(0.35 0.02 165 / 40%);
+  --input: oklch(0.35 0.02 165 / 40%);
+  --ring: oklch(0.65 0.16 160 / 45%);
+
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-tertiary: #94A3B8;
+
+  --bg-white: #0F172A;
+  --bg-gray-light: #1E293B;
+  --bg-gray-surface: #0F172A;
+
+  --glass-bg: rgba(15, 23, 42, 0.88);
+  --glass-bg-hover: rgba(30, 41, 59, 0.95);
+  --glass-border-color: rgba(255, 255, 255, 0.12);
+  --glass-border-strong: rgba(52, 211, 153, 0.45);
+  --glass-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.45);
+  --glass-shadow-hover: 0 8px 30px 0 rgba(0, 0, 0, 0.55);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html,
+  body {
+    background-color: #FFFFFF;
+  }
+
+  html.dark,
+  html.dark body {
+    background-color: #090E17;
+    background: linear-gradient(135deg, #090E17 0%, #0F172A 100%);
+    color: var(--text-secondary);
+  }
+
+  body {
+    color: var(--text-secondary);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+}
+
+@utility liquid-glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px) saturate(120%);
+  border: 1px solid var(--glass-border-color);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--glass-shadow);
+  transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@utility liquid-glass-hover {
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-strong);
+  box-shadow: var(--glass-shadow-hover);
+}
+
+@utility butter-text {
+  color: var(--text-primary);
+}
+
+@utility butter-sub {
+  color: var(--text-secondary);
+}
+
+@utility butter-dim {
+  color: var(--text-tertiary);
+}
+
+@utility flag-red-glow {
+  background: rgba(239, 68, 68, 0.18);
+  border: 1px solid rgba(255, 107, 107, 0.55);
+  box-shadow: 0 0 32px rgba(239, 68, 68, 0.35), inset 0 0 24px rgba(239, 68, 68, 0.15);
+}
+
+@utility flag-yellow-glow {
+  background: rgba(245, 158, 11, 0.18);
+  border: 1px solid rgba(251, 191, 36, 0.55);
+  box-shadow: 0 0 32px rgba(245, 158, 11, 0.35), inset 0 0 24px rgba(245, 158, 11, 0.12);
+}
+
+@utility flag-green-glow {
+  background: rgba(16, 185, 129, 0.18);
+  border: 1px solid rgba(52, 211, 153, 0.55);
+  box-shadow: 0 0 32px rgba(16, 185, 129, 0.35), inset 0 0 24px rgba(16, 185, 129, 0.12);
+}
+
+@utility mono {
+  font-family: var(--font-mono);
+}
+
+@keyframes blob-drift {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(40px, -30px) scale(1.08); }
+  66% { transform: translate(-30px, 40px) scale(0.94); }
+}
+
+@keyframes pulse-halo {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+.blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(80px);
+  opacity: 0.55;
+  pointer-events: none;
+  animation: blob-drift 18s ease-in-out infinite;
+}
+
+.pulse-halo {
+  animation: pulse-halo 2.4s ease-in-out infinite;
+}
+
+/* Range slider styling */
+input[type="range"].liquid-range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, rgba(52,211,153,0.6) 0%, rgba(52,211,153,0.6) var(--val, 50%), rgba(200,200,200,0.3) var(--val, 50%), rgba(200,200,200,0.3) 100%);
+  border-radius: 9999px;
+  outline: none;
+}
+input[type="range"].liquid-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: #34D399;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 2px 8px rgba(52, 211, 153, 0.4);
+  cursor: pointer;
+}
+input[type="range"].liquid-range::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: #34D399;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 2px 8px rgba(52, 211, 153, 0.4);
+  cursor: pointer;
+}

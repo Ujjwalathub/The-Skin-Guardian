@@ -1,0 +1,16 @@
+{
+  "sex_enc": 17277.983244817704,
+  "p_cnn_score": 10747.370152638177,
+  "age_approx": 2999.295268891263,
+  "clin_size_long_diam_mm": 2840.1214803792536,
+  "site_enc": 1521.2704887585714,
+  "tbp_lv_color_std_mean": 0.0,
+  "tbp_lv_norm_color": 0.0,
+  "tbp_lv_radial_color_std_max": 0.0,
+  "tbp_lv_stdL": 0.0,
+  "tbp_lv_norm_border": 0.0,
+  "tbp_lv_symm_2axis": 0.0,
+  "tbp_lv_eccentricity": 0.0,
+  "tbp_lv_perimeterMM": 0.0,
+  "tbp_lv_minorAxisMM": 0.0
+}
